@@ -26,4 +26,7 @@ FortyTwoWords::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Reload source code of engines whenever it changes
+  config.autoload_paths += %W(#{config.root}/engines)
 end
