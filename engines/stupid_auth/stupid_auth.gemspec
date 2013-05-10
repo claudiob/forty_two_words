@@ -7,13 +7,13 @@ require "stupid_auth/version"
 Gem::Specification.new do |s|
   s.name        = "stupid_auth"
   s.version     = StupidAuth::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of StupidAuth."
-  s.description = "TODO: Description of StupidAuth."
+  s.authors     = ['claudiob']
+  s.email       = ['claudiob@gmail.com']
+  s.homepage    = 'http://github.com/claudiob/stupid_auth'
+  s.summary     = 'Simplest authentication ever: just click Log In'
+  s.description = 'Provides two routes (POST login, DELETE logout) and a controller method/helper logged_in?'
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 4.0.0.rc1"
 end
