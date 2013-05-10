@@ -42,3 +42,8 @@ SCHEDULE
 1a) an intro/about page with a form to log in/sign up // a page with your list of words and a form to enter a string and submit and go back there
 1b) facilitate writing down words: with an SMS? An email? Taking a snapshot of the book page (a la Simple)? With a tweet? For now, email (it's free!), so a personal email for each account... should be the same email address that tells you You are welcome. For now just parse the word either in the subject or body. In the future also parse feelings and snapshots.
 
+TODO
+====
+
+* move <% if current_user %> out of application.html.erb
+

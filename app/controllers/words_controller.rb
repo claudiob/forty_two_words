@@ -1,5 +1,6 @@
 class WordsController < ApplicationController
   respond_to :html
+  before_action :require_login
   before_action :set_word, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -48,5 +49,9 @@ private
   # Never trust parameters from the scary internet, only allow the white list through.
   def word_params
     params.require(:word).permit(:text)
+  end
+
+  def require_login
+    head :unauthorized unless logged_in?
   end
 end
