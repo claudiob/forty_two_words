@@ -3,7 +3,7 @@ class FeelingsController < ApplicationController
 
   # GET /feelings
   def index
-    @feelings = Feeling.all
+    @feelings = Feeling.includes(:user, :word)
   end
 
   # GET /feelings/1
@@ -45,14 +45,14 @@ class FeelingsController < ApplicationController
     redirect_to feelings_url, notice: 'Feeling was successfully destroyed.'
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_feeling
-      @feeling = Feeling.find(params[:id])
-    end
+private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_feeling
+    @feeling = Feeling.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def feeling_params
-      params[:feeling]
-    end
+  # Only allow a trusted parameter "white list" through.
+  def feeling_params
+    params.require(:feeling).permit(:user_id, :word_id)
+  end
 end

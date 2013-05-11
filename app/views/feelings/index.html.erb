@@ -3,6 +3,8 @@
 <table>
   <thead>
     <tr>
+      <th>User</th>
+      <th>Word</th>
       <th></th>
       <th></th>
       <th></th>
@@ -12,9 +14,11 @@
   <tbody>
     <% @feelings.each do |feeling| %>
       <tr>
+        <td><%= feeling.user %></td>
+        <td><%= feeling.word %></td>
         <td><%= link_to 'Show', feeling %></td>
         <td><%= link_to 'Edit', edit_feeling_path(feeling) %></td>
-        <td><%= link_to 'Destroy', feeling, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Destroy', feeling, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
