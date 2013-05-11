@@ -9,10 +9,15 @@
 <body>
   <navbar>
     <% if logged_in? %>
+      <%= link_to 'Users', users_path %>
+      <%= link_to 'Words', words_path %>
+      <%= link_to 'Feelings', feelings_path %>
       <%= button_to 'Log out', logout_path, method: :delete %>
     <% else %>
       <%= button_to 'Log in', login_path %>
     <% end %>
+    <p id="notice"><%= notice %></p>
+    <p id="alert"><%= alert %></p>
   </navbar>
 
   <%= yield %>

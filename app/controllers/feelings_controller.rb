@@ -1,4 +1,5 @@
 class FeelingsController < ApplicationController
+  before_action :require_login
   before_action :set_feeling, only: [:show, :edit, :update, :destroy]
 
   # GET /feelings

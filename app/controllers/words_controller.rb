@@ -37,7 +37,7 @@ class WordsController < ApplicationController
 
   def destroy
     @word.destroy
-    redirect_to words_url
+    redirect_to words_url, notice: 'Word was successfully destroyed.'
   end
 
 private
@@ -49,9 +49,5 @@ private
   # Never trust parameters from the scary internet, only allow the white list through.
   def word_params
     params.require(:word).permit(:text)
-  end
-
-  def require_login
-    head :unauthorized unless logged_in?
   end
 end
