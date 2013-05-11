@@ -1,0 +1,29 @@
+<h1>Listing feelings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Word</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @feelings.each do |feeling| %>
+      <tr>
+        <td><%= feeling.user %></td>
+        <td><%= feeling.word %></td>
+        <td><%= link_to 'Show', feeling %></td>
+        <td><%= link_to 'Edit', edit_feeling_path(feeling) %></td>
+        <td><%= button_to 'Destroy', feeling, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Feeling', new_feeling_path %>

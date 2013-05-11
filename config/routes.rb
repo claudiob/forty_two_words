@@ -1,5 +1,7 @@
 FortyTwoWords::Application.routes.draw do
   resources :words
+  resources :users
+  resources :feelings
 
   root 'welcome#index', as: :welcome
 
