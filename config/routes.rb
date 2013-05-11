@@ -3,8 +3,6 @@ FortyTwoWords::Application.routes.draw do
 
   root 'welcome#index', as: :welcome
 
-  post 'sessions', to: 'sessions#create', as: :login
-  delete 'sessions', to: 'sessions#destroy', as: :logout
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
