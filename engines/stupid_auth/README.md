@@ -11,6 +11,8 @@ How to install
 
 Just add the `stupid_auth` gem to your `Gemfile`, bundle, and you will get access to the `login` (POST) route, `logout` (DELETE) route and `logged_in?` method, accessible both in your controllers and helpers.
 
+Note that SimpleAuth requires `ApplicationController` to exist in the app where it is installed.
+
 Why is it useful
 ================
 
@@ -21,7 +23,8 @@ If you start with `StupidAuth`, you get exactly this, without wasting precious t
 How to contribute
 =================
 
-Fork the project, edit the code, make sure the tests pass (), commit and submit a Github pull request. Thanks!
+Fork the project, edit the code, make sure the tests pass by running `rake`, commit and submit a Github pull request.
+Thanks! :)
 
 License
 =======
