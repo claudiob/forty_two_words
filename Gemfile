@@ -38,8 +38,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Authenticate with the stupid auth engine
-gem 'stupid_auth', path: 'engines/stupid_auth'
+# Authenticate with the dumb auth engine
+gem 'dumb_auth'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
