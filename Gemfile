@@ -39,7 +39,7 @@ group :doc do
 end
 
 # Authenticate with the dumb auth engine
-gem 'dumb_auth'
+gem 'dumb_auth', path: '../dumb_auth'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
